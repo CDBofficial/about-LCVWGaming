@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - AIX in one</title>
+    <style>
+        :root {
+            --primary-color: #ff69b4;
+            --accent-color: #ff1493;
+            --blur-intensity: 8px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://imghost.net/ib/AoKTqwfhvfpV0s4_1742216714.png');
+            color: #333;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            padding: 1rem;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255, 20, 147, 0.1);
+        }
+
+        .content-section {
+            margin: 2rem;
+            padding: 2rem;
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .project-card {
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .project-button {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .project-button:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .content-section {
+                margin: 1rem;
+                padding: 1rem;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-section">
+        <h1>My Projects</h1>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="https://aix-in-short.carrd.co/assets/images/image03.jpg?v=05d574a8" alt="Project 1">
+                <h3>BloxdForge</h3>
+                <p>The biggest project of mine. Its CurseForge but for bloxd.io!</p>
+                <button class="project-button">View Project</button>
+            </div>
+            <div class="project-card">
+                <img src="https://aix-in-short.carrd.co/assets/images/image02.jpg?v=05d574a8" alt="Project 2">
+                <h3>Xperimental zone</h3>
+                <p>Fun small projects of mine. you can take the code and expand them.</p>
+                <button class="project-button">View Project</button>
+            </div>
+            <div class="project-card">
+                <img src="https://aix-in-short.carrd.co/assets/images/image04.jpg?v=05d574a8" alt="Project 3">
+                <h3>XyleOS</h3>
+                <p>A site that acts as a OS, cool thing to mess around with...</p>
+                <button class="project-button">View Project</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

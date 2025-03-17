@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - AIX in one</title>
+    <style>
+        :root {
+            --primary-color: #ff69b4;
+            --accent-color: #ff1493;
+            --blur-intensity: 8px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://imghost.net/ib/AoKTqwfhvfpV0s4_1742216714.png');
+            color: #333;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            padding: 1rem;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255, 20, 147, 0.1);
+        }
+
+        .content-section {
+            margin: 2rem;
+            padding: 2rem;
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .product-card {
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 105, 180, 0.1), rgba(255, 20, 147, 0.05));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-card:hover::before {
+            opacity: 1;
+        }
+
+        .product-card img {
+            width: 100%;
+            height:300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-button {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .product-button:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+        }
+
+        .price {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 0.7rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (max-width: 768px) {
+            .content-section {
+                margin: 1rem;
+                padding: 1rem;
+            }
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Projects</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-section">
+        <h1>My Products</h1>
+        <div class="products-grid">
+            <div class="product-card" id="product2">
+                <img src="images/v2_low.png" alt="Product 2">
+                <h3>V2 Wallpaper</h3>
+                <p>Its beautiful. isnt it?</p>
+                <p class="price">linkversite</p>
+                <button class="product-button">Get Now</button>
+            </div>
+            <div class="product-card" id="product1">
+                <img src="images/original-low.png" alt="Product 1">
+                <h3>The Original</h3>
+                <p>Nice and vibrant.</p>
+                <p class="price"></p>
+                <button class="product-button">Get Now</button>
+            </div>
+            <div class="product-card" id="product3">
+                <img src="images/planetax_low.png" alt="Product 3">
+                <h3>Planet XA Wallpaper</h3>
+                <p>Smooth, shinny.</p>
+                <p class="price"></p>
+                <button class="product-button">Get Now</button>
+            </div>
+            <div class="product-card" id="product3">
+                <img src="images/planetx_low.png" alt="Product 3">
+                <h3>Planet X Wallpaper</h3>
+                <p>Simple. better?</p>
+                <p class="price">linkversite</p>
+                <button class="product-button">Get Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
