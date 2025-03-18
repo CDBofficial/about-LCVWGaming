@@ -20,14 +20,17 @@
         }
 
         nav {
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
+            height: 60px;
             background: rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(12px);
             padding: 1rem;
             z-index: 100;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 20px 20px;
         }
 
         nav ul {
@@ -40,16 +43,28 @@
         }
 
         nav a {
+            display: inline-block;
             color: var(--accent-color);
             text-decoration: none;
             font-weight: bold;
-            padding: 0.5rem 1rem;
+            padding: 1rem 2rem;
             border-radius: 20px;
-            transition: all 0.3s ease;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         nav a:hover {
-            background: rgba(255, 20, 147, 0.1);
+            background: linear-gradient(145deg, rgba(255, 20, 147, 0.15), rgba(255, 20, 147, 0.1));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            outline: 2px solid rgba(255, 20, 147, 0.3);
+            outline-offset: 5px;
+        }
+
+        nav a:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .content-section {
