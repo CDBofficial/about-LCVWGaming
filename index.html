@@ -303,9 +303,10 @@
             .welcome-section h1 {
                 font-size: 2rem;
             }
+        }
 
-            /* connections Container */
-            .connections-container {
+                    /* connections Container */
+                    .connections-container {
                 display: flex !important;
                 flex-direction: column !important;
                 align-items: center !important;
@@ -319,7 +320,7 @@
                 backdrop-filter: blur(12px) !important;
                 border-radius: 20px !important;
                 border: 1px solid rgba(255, 255, 255, 0.3) !important;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
             }
 
             .connections-section h2 {
@@ -350,6 +351,15 @@
                 border: none !important;
                 cursor: pointer !important;
                 transition: all 0.3s ease !important;
+                display: inline-flex !important;
+                justify-content: center !important;
+                align-items: center !important; 
+            }
+
+            .connections-section button i {
+                font-size: 1.5rem !important;
+                margin: 0 !important; 
+                vertical-align: middle !important; 
             }
 
             .connections-section button:hover {
@@ -360,11 +370,6 @@
                 outline-offset: 5px !important;
             }
 
-            .connections-section button i {
-                font-size: 1.5rem !important;
-                margin-right: 0.5rem !important;
-            }
-        }
     </style>
 </head>
 <body>
@@ -382,10 +387,10 @@
         <p>Here you can get to know me better and get some cool stuff.</p>
     </div>
 
-    <div class="connections-container">
+    <div class="">
         <div class="connections-section">
             <h2>Connections</h2>
-            <p>Here you can find some of my connections and projects.</p>
+            <p>Im active in these platforms:</p>
 <button onclick="window.open('https://github.com/32-AIX')"><i class="fa-brands fa-github"></i></button>
 <button onclick="window.open('https://www.youtube.com/@A_I_X')"><i class="fa-brands fa-youtube"></i></button>
 <button onclick="window.open('https://discord.gg/j57BMGp6FD')"><i class="fa-brands fa-discord"></i></button>
