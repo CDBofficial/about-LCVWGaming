@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIX in one</title>
     <link rel="icon" href="https://i.imgur.com/P9pgqQj_d.webp">
-    <link rel="icon" href="https://i.imgur.com/P9pgqQj_d.webp">
     <meta property="og:title" content="AIX in one - Beautiful Wallpapers & About me">
     <meta property="og:description" content="Get some wallpapers and read about me!">
     <meta property="og:image" content="https://raw.githubusercontent.com/AIX-32/AIX-in-one/main/images/planetX.png">
     <meta property="og:url" content="https://aix-32.github.io/AIX-in-one/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMnQh0f3c1n5e5e5f5e5f5e5f5e5f5e5f5e5f5e" crossorigin="anonymous">
     <meta property="og:type" content="website">
     <style>
         :root {
@@ -303,6 +303,67 @@
             .welcome-section h1 {
                 font-size: 2rem;
             }
+
+            /* connections Container */
+            .connections-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .connections-section {
+                margin: 1rem;
+                padding: 2rem;
+                background: rgba(255, 255, 255, 0.4);
+                backdrop-filter: blur(12px);
+                border-radius: 20px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .connections-section h2 {
+                font-size: 1.7rem;
+                font-weight: 700;
+                color: #111;
+                margin-bottom: 0.3rem;
+                line-height: 1.2;
+            }
+
+            .connections-section p {
+                font-size: 1.25rem;
+                font-weight: 400;
+                max-width: 800px;
+                margin: 0 auto;
+                line-height: 1.6;
+                color: #444;
+            }
+
+            .connections-section button {
+                width: 50px;
+                height: 50px;
+                margin: 2px;
+                margin-top: 1rem;
+                border-radius: 600px;
+                background: var(--accent-color);
+                color: white;
+                border: none;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .connections-section button:hover {
+                background: var(--primary-color);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+                outline: 2px solid rgba(255, 20, 147, 0.3);
+                outline-offset: 5px;
+            }
+
+            .connections-section button i {
+                font-size: 1.5rem;
+                margin-right: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -321,6 +382,15 @@
         <p>Here you can get to know me better and get some cool stuff.</p>
     </div>
 
+    <div class="connections-container">
+        <div class="connections-section">
+            <h2>Connections</h2>
+            <p>Here you can find some of my connections and projects.</p>
+<button onclick="window.open('https://github.com/32-AIX')"><i class="fa-brands fa-github"></i></button>
+<button onclick="window.open('https://www.youtube.com/@A_I_X')"><i class="fa-brands fa-youtube"></i></button>
+<button onclick="window.open('https://discord.gg/j57BMGp6FD')"><i class="fa-brands fa-discord"></i></button>
+        </div>
+    </div>
     <div class="featured-scroll">
         <div class="featured-scroll-inner">
             <div class="featured-item">
@@ -359,7 +429,7 @@
         <div class="content-section">
             <h2>Get some of my stuff</h2>
             <p>Check out some of wallpapers, their free and you can download them.</p>
-            <button class="product-button" onclick="window.location.href='products.html'">Wallpapers</button>
+            <button class="product-button" onclick="window.location.href='products.html'">All Projects</button>
         </div>
         <div class="content-section">
             <h2>Projects</h2>
